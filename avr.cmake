@@ -4,8 +4,12 @@ FUNCTION( AVR_ADD_EXECUTABLE target_name )
     SET( AVR_MMCU atmega8 )
   ENDIF()
 
+  IF( NOT AVR_PART )
+    SET( AVR_PART m8 )
+  ENDIF()
+
   IF( NOT AVR_F_CPU )
-    SET( AVR_F_CPU 16000000 )
+    SET( AVR_F_CPU 1000000 )
   ENDIF()
 
   FOREACH(  src_file ${ARGN} )
