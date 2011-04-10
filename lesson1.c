@@ -1,7 +1,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
-//#include <avr/pgmspace.h>   /* required by usbdrv.h */
-//#include <usbdrv/usbdrv.h>
+#include <avr/pgmspace.h>   /* required by usbdrv.h */
+#include <usbdrv/usbdrv.h>
 
 // Assumptions:
 //  LED connected to PORTB
@@ -14,17 +14,18 @@
 
 int main (void)
 {
-  // set PORTB for output
-  DDRB = 0xFF;
+  // set PORTA for output
+  DDRA = 0xFF;
+  //PORTA = 0x00;
 
   while (1) 
   {
     // set PORTB high
-    PORTB = 0xFF;
+    PORTA = 0x01;
     _delay_ms(500);
     
     // set PORTB low
-    PORTB = 0x00;
+    PORTA = 0x02;
     _delay_ms(500);
   }
 

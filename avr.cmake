@@ -39,7 +39,7 @@ FUNCTION( AVR_ADD_EXECUTABLE target_name )
       LIST( APPEND object_files "${CMAKE_CURRENT_BINARY_DIR}/${rel_object_file}" )
       
       ADD_CUSTOM_COMMAND( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${rel_object_file}
-        COMMAND avr-gcc -mmcu=${AVR_MMCU} -DF_CPU=${AVR_F_CPU} ${full_src_file} 
+        COMMAND avr-gcc -mmcu=${AVR_MMCU} -DF_CPU=${AVR_F_CPU} -O1 ${full_src_file} 
                 -c 
                 -o ${CMAKE_CURRENT_BINARY_DIR}/${rel_object_file} 
                 -I"${CMAKE_SOURCE_DIR}"
@@ -77,8 +77,8 @@ FUNCTION( AVR_ADD_EXECUTABLE target_name )
   ADD_CUSTOM_TARGET( ${target_name}_hex DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${target_name}.hex )
 
   ADD_CUSTOM_TARGET( deploy_${target_name} 
-                     COMMAND "avrdude -p ${AVR_PART} -c avrispmkII -e -U flash:w:${CMAKE_CURRENT_BINARY_DIR}/${target_name}.hex"
-                     DEPENDS ${target_name} )
+                     COMMAND avrdude -P usb -p ${AVR_PART} -c avrisp2 -e -U flash:w:${CMAKE_CURRENT_BINARY_DIR}/${target_name}.hex
+                     DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${target_name}.hex )
 
 ENDFUNCTION()
 
