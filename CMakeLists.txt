@@ -11,10 +11,14 @@ SET( AVR_F_CPU 1000000 )
 INCLUDE(avr.cmake)
 
 AVR_ADD_EXECUTABLE( lesson1 
-                    lesson1.c 
+                    lesson1/lesson1.c 
                     #usbdrv/usbdrv.h
                     #usbdrv/usbdrv.c
                     #usbdrv/oddebug.c
                     #usbdrv/usbdrvasm.S
+                  )
+
+AVR_ADD_EXECUTABLE( lesson2
+                    lesson2/lesson2.c
                   )
 
