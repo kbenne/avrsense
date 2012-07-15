@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/!svn/ver/211/trunk/apps/simple-httpd
+END
+simple-httpd.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/210/trunk/apps/simple-httpd/simple-httpd.h
+END
+Makefile.simple-httpd
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/211/trunk/apps/simple-httpd/Makefile.simple-httpd
+END
+simple-httpd.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/210/trunk/apps/simple-httpd/simple-httpd.c
+END

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/211/trunk/drivers/enc28j60
+END
+enc28j60.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/13/trunk/drivers/enc28j60/enc28j60.c
+END
+enc28j60.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/10/trunk/drivers/enc28j60/enc28j60.h
+END
+global.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/10/trunk/drivers/enc28j60/global.h
+END
+avrlibdefs.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/210/trunk/drivers/enc28j60/avrlibdefs.h
+END
+avrlibtypes.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/210/trunk/drivers/enc28j60/avrlibtypes.h
+END
+network.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/58/trunk/drivers/enc28j60/network.c
+END
+enc28j60conf.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/22/trunk/drivers/enc28j60/enc28j60conf.h
+END
+Makefile.enc28j60
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/211/trunk/drivers/enc28j60/Makefile.enc28j60
+END

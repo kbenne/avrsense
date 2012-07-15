@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/211/trunk/apps/hello-world
+END
+Makefile.hello-world
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/211/trunk/apps/hello-world/Makefile.hello-world
+END
+hello-world.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/210/trunk/apps/hello-world/hello-world.c
+END
+hello-world.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/210/trunk/apps/hello-world/hello-world.h
+END
