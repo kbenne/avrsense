@@ -1,3 +1,9 @@
+SET( AVR_INCLUDE_DIRS "" )
+
+MACRO( AVR_INCLUDE_DIRECTORIES dir )
+  LIST( APPEND AVR_INCLUDE_DIRS "-I${dir}" )
+ENDMACRO()
+
 FUNCTION( AVR_ADD_EXECUTABLE target_name )
 
   IF( NOT AVR_MMCU )
@@ -40,11 +46,11 @@ FUNCTION( AVR_ADD_EXECUTABLE target_name )
       
       ADD_CUSTOM_COMMAND( OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${rel_object_file}
         COMMAND avr-gcc -mmcu=${AVR_MMCU} -DF_CPU=${AVR_F_CPU} -O1 ${full_src_file} 
-                -c 
+                -c
+                ${AVR_INCLUDE_DIRS}
                 -o ${CMAKE_CURRENT_BINARY_DIR}/${rel_object_file} 
-                -I"${CMAKE_SOURCE_DIR}"
+                -I"${CMAKE_CURRENT_SOURCE_DIR}"
         DEPENDS ${full_src_file} )
-
     ENDIF()
 
     IF( extension STREQUAL ".S" )
